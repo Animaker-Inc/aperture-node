@@ -64,13 +64,13 @@ func showUsage() {
 }
 
 switch CLI.arguments.first {
-case "list-screens":
-  print(try toJson(Devices.screen()), to: .standardError)
-  exit(0)
-case "list-audio-devices":
-  // Uses stderr because of unrelated stuff being outputted on stdout
-  print(try toJson(Devices.audio()), to: .standardError)
-  exit(0)
+// case "list-screens":
+//   print(try toJson(Devices.screen()), to: .standardError)
+//   exit(0)
+// case "list-audio-devices":
+//   // Uses stderr because of unrelated stuff being outputted on stdout
+//   print(try toJson(Devices.audio()), to: .standardError)
+//   exit(0)
 case .none:
   showUsage()
   exit(1)

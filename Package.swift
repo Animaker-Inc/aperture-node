@@ -15,7 +15,7 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/wulkano/Aperture", from: "0.2.0")
+    .package(url: "https://github.com/Animaker-Inc/Aperture", from: "0.2.0")
   ],
   targets: [
     .target(
