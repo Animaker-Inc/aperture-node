@@ -4,3 +4,7 @@ yarn.lock
 /Packages
 /*.xcodeproj
 /aperture
+recording.mp4
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.swiftpm/xcode/package.xcworkspace/xcuserdata/akbarbashakm.xcuserdatad/UserInterfaceState.xcuserstate
+.swiftpm/xcode/xcuserdata/akbarbashakm.xcuserdatad/xcschemes/xcschememanagement.plist

@@ -39,18 +39,13 @@ func record(_ optionsString: String, processId: String) throws {
   recorder.onResume = {
     sendEvent(processId: processId, event: OutEvent.onResume.rawValue)
   }
-
-  recorder.onFinish = {
+ 
+  recorder.onFinish = { (error) in
     sendEvent(processId: processId, event: OutEvent.onFinish.rawValue)
     for observer in observers {
       DistributedNotificationCenter.default().removeObserver(observer)
     }
     exit(0)
-  }
-
-  recorder.onError = {
-    print($0, to: .standardError)
-    exit(1)
   }
 
   CLI.onExit = {

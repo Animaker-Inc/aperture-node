@@ -64,7 +64,7 @@ extension ApertureCLI.List {
 
     mutating func run() throws {
       // Uses stderr because of unrelated stuff being outputted on stdout
-      print(try toJson(Devices.screen()), to: .standardError)
+        print(try toJson(Aperture.Devices.screen()), to: .standardError)
     }
   }
 
@@ -73,7 +73,7 @@ extension ApertureCLI.List {
 
     mutating func run() throws {
       // Uses stderr because of unrelated stuff being outputted on stdout
-      print(try toJson(Devices.audio()), to: .standardError)
+        print(try toJson(Aperture.Devices.audio()), to: .standardError)
     }
   }
 }
