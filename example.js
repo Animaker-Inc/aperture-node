@@ -13,6 +13,10 @@ async function main() {
   console.log('Recording started');
   await recorder.isFileReady
   console.log('File is ready');
+  await delay(3000);
+  await recorder.pause().then(()=>console.log('Paused'));
+  await delay(3000);
+  await recorder.resume().then(()=>console.log('Resumed'));
   await delay(5000);
   const fp = await recorder.stopRecording();
   fs.renameSync(fp, 'recording.mp4');

@@ -36,7 +36,7 @@ final class ApertureNotification {
     }
 
     DistributedNotificationCenter.default().postNotificationName(
-      .Name(responseName!),
+      NSNotification.Name(responseName!),
       object: nil,
       userInfo: payload,
       deliverImmediately: true
@@ -50,7 +50,7 @@ func answerEvent(
   using handler: @escaping (ApertureNotification) -> Void
 ) -> NSObjectProtocol {
   return DistributedNotificationCenter.default().addObserver(
-    forName: .Name("aperture.\(processId).\(event)"),
+    forName: NSNotification.Name("aperture.\(processId).\(event)"),
     object: nil,
     queue: nil
   ) { notification in
@@ -80,7 +80,7 @@ func sendEvent(
   var observer: Any?
 
   observer = DistributedNotificationCenter.default().addObserver(
-    forName: .Name(responseName),
+    forName: NSNotification.Name(responseName),
     object: nil,
     queue: nil
   ) { notification in
@@ -89,7 +89,7 @@ func sendEvent(
   }
 
   DistributedNotificationCenter.default().postNotificationName(
-    .Name("aperture.\(processId).\(event)"),
+    NSNotification.Name("aperture.\(processId).\(event)"),
     object: nil,
     userInfo: payload,
     deliverImmediately: true

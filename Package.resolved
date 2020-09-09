@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "Aperture",
-        "repositoryURL": "https://github.com/wulkano/Aperture",
+        "repositoryURL": "https://github.com/Animaker-Inc/Aperture",
         "state": {
           "branch": null,
           "revision": "2447e76fac46f3317544a367f942356f4f5df21c",
