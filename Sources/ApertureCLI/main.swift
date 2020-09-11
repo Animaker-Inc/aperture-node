@@ -7,6 +7,7 @@ enum OutEvent: String, CaseIterable, ExpressibleByArgument {
   case onFileReady
   case onPause
   case onResume
+  case onUpdate
   case onFinish
 }
 

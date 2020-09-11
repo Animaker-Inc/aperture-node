@@ -36,6 +36,10 @@ func record(_ optionsString: String, processId: String) throws {
     sendEvent(processId: processId, event: OutEvent.onPause.rawValue)
   }
 
+  recorder.onUpdate = {
+    sendEvent(processId: processId, event: OutEvent.onUpdate.rawValue)
+  }
+
   recorder.onResume = {
     sendEvent(processId: processId, event: OutEvent.onResume.rawValue)
   }
